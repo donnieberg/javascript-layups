@@ -4,10 +4,11 @@
 ### String Methods - [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 * `indexOf()`
 * `concat()` is the same as `+=`
-* `splice()`
+* `slice()`
+* `split()`
 
 ### Common Array things that Strings also use
 * for loop
-* .length
+* string.length
 
 
