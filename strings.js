@@ -1,3 +1,21 @@
+// JS String Method Examples
+//==============================================================
+// 1. indexOf()
+var sentence = "The big red dog runs fast.";
+
+// 2. concat() is the same as +=
+var first = "Ricky";
+var last = "Holtz";
+
+// 3. slice()
+var instructions = "1. Go forward three steps.";
+
+// 4. split()
+var months = "Jan, Feb, March, April, May, June, July, Aug, Sept, Oct, Nov, Dec";
+
+
+
+// CHALLENGES
 //==============================================================
 // I. Create a SuperString class - Add three mehtods (instructions below) to make the "tests" pass
 //==============================================================
@@ -13,11 +31,11 @@ function SuperString(){
 }
 
 //Tests
-var testString = new SuperString();
-var name = "Donielle Berg";
-var uniqCount = testString.countUniqLetters(name);
-var letterCount = testString.letterCount(name);
-
-console.log(name + " has " + uniqCount + " unique letters.");
-console.log("the letter count of " + name + " is " + letterCount);
+//var testString = new SuperString();
+//var name = "Donielle Berg";
+//var uniqCount = testString.countUniqLetters(name);
+//var letterCount = testString.letterCount(name);
+//
+//console.log(name + " has " + uniqCount + " unique letters.");
+//console.log("the letter count of " + name + " is " + letterCount);
 
