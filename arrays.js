@@ -36,5 +36,3 @@ var mixArr = ['aa', 'bb', 'a', 4, 8, 42, 103, 'c', 15, 76, 23, 42];
 var nestedArr = [[1,2,3], [4,5,6], [7,8,9]];
 //var flatArr = myArr.flattenArray(nestedArr);
 //console.log(flatArr);
-
-
