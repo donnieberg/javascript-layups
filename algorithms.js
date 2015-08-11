@@ -86,13 +86,13 @@ var reverse = function(array){
   var right;
 
   for (var i = 0; i <= array.length/2; i++){
+    //set left & right storage variables
     left = array[i];
-    right = array[array.length - i];
+    right = array[(array.length - 1) - i];
 
+    //swap left and right with storage variables
     array[i] = right;
-    array[array.length - i] = left;
-    console.log("i is: ", i);
-    console.log("right is: ", right);
+    array[(array.length - 1) - i] = left;
   };
 
   return array;
@@ -100,6 +100,8 @@ var reverse = function(array){
 
 console.log("the reverse of [1,2,3,4,5,6] is: ", reverse([1,2,3,4,5,6]));
 //===> [6,5,4,3,2,1]
+console.log("the reverse of [1,2,3,4,5,6,7] is: ", reverse([1,2,3,4,5,6,7]));
+//===> [7,6,5,4,3,2,1]
 
 
 /*
