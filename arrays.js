@@ -3,9 +3,21 @@
 //1. Replacing elements in array
 var greetings = ["hello", "hola", "bonjour", "hallo", "nihao"];
 
-//replace "hello" with "howdy"
-console.log(greetings);
+//greetings.shift();
+//greetings.unshift("howdy");
 
+greetings.splice(0, 1, "howdy");
+
+//replace "hello" with "howdy"
+//console.log(greetings);
+
+/*
+var upperCaseGreetings = greetings.map(function(greeting){
+  return greeting.toUpperCase();
+});
+
+console.log(upperCaseGreetings);
+*/
 
 // CHALLENGES
 //==============================================================
@@ -19,22 +31,42 @@ function SuperArray(){
   //c. secondly, check if the two items are the same data types and compare those
   //d. if they're not the same data type, then you'll need to compare the typeof for both items
 
+  this.sortObjs = function(unsortedArray){
+    var sortedArray = unsortedArray.sort(function(a, b){
+      if(a === b){
+        return 0;
+      }else if (typeof a === typeof b){
+        return a > b ? 1 : -1
+      }else{
+        return typeof a > typeof b ? 1 : -1
+      }
+    });
+
+    return sortedArray;
+  }
+
 
   //2. create a class method called flattenArray that takes in a nested array and returns a flat array (ie. [[1,2], [3, 4]] ==> [1, 2, 3, 4])
   //hint: use reduce() and concat()
 
+  this.flattenArray = function(nestedArray){
+    var flatArray = nestedArray.reduce(function(a, b){
+      return a.concat(b);
+    });
+
+    return flatArray;
+  }
+
 };
 
 //TESTS
-var myArr = new SuperArray();
+var testArray = new SuperArray();
 
 var mixArr = ['aa', 'bb', 'a', 4, 8, 42, 103, 'c', 15, 76, 23, 42];
-//var sortedArr = myArr.sortObjs(mixArr);
-//console.log(sortedArr);
+var sortedArr = testArray.sortObjs(mixArr);
+console.log(sortedArr);
 
 //---------------------
 var nestedArr = [[1,2,3], [4,5,6], [7,8,9]];
-//var flatArr = myArr.flattenArray(nestedArr);
-//console.log(flatArr);
-
-
+var flatArr
+console.log(flatArr);
