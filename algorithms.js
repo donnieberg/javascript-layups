@@ -1,3 +1,5 @@
+"use strict";
+
 //==============================================================
 // 1. Test if two strings are anagram - rearrange letters from one word to make a new word
 //
@@ -79,7 +81,7 @@ console.log("107 is prime: ", isPrime(107));
   };
 
   return reverseArray
-};*/
+};
 
 var reverse = function(array){
   var left;
@@ -104,11 +106,21 @@ console.log("the reverse of [1,2,3,4,5,6,7] is: ", reverse([1,2,3,4,5,6,7]));
 //===> [7,6,5,4,3,2,1]
 
 
-/*
+
+
+
 //==============================================================
 // 4. Check if string is palindrome - one word is the same spelled forwards and backwards
 //
 var isPalindrome = function(string) {
+  var strLength = string.length;
+
+  for (var i = 0; i <= string.length/2; i++){
+    if(string[i] !== string[(strLength - 1) - i]){
+      return false;
+    }
+  }
+  return true;
 };
 
 console.log("racecar is a palindrome: ", isPalindrome("racecar"));
@@ -116,16 +128,31 @@ console.log("racecar is a palindrome: ", isPalindrome("racecar"));
 console.log("ricky is a palindrome: ", isPalindrome("ricky"));
 //===> false
 
-
+*/
 
 //==============================================================
 // 5. Recursive Fibonnacci with memoization
 //
 
-var fibonnacci = function() {
-}();
+var storeNum;
 
-var fib50 = fibonnacci(50);
+var fibonnacci = function(fibNum, i, j) {
+  var finalCount;
+
+  //using 3 because 1 and 1 were both passed to initial function
+  if (fibNum === 3){
+    finalCount = i + j;
+  }else{
+    //return vs. just running the function?
+    return fibonnacci(fibNum - 1, j, i+j)
+  }
+
+  return finalCount;
+};
+
+var fib50 = fibonnacci(50, 1, 1);
 console.log("the fibonnacci of 50 is: ", fib50);
 //===> 12586269025
-*/
+var fib17 = fibonnacci(17, 1, 1);
+console.log("the fibonnacci of 17 is: ", fib17);
+//===> 1597
