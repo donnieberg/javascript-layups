@@ -136,7 +136,7 @@ console.log("ricky is a palindrome: ", isPalindrome("ricky"));
 
 var storeNum;
 
-var fibonnacci = function(fibNum, i, j) {
+/*var fibonnacci = function(fibNum, i, j) {
   var finalCount;
 
   //using 3 because 1 and 1 were both passed to initial function
@@ -148,7 +148,8 @@ var fibonnacci = function(fibNum, i, j) {
   }
 
   return finalCount;
-};
+};*/
+
 
 var fib50 = fibonnacci(50, 1, 1);
 console.log("the fibonnacci of 50 is: ", fib50);
